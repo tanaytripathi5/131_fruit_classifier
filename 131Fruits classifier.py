@@ -45,7 +45,7 @@ model = Model(inputs=resnet.input, outputs=x)
 model.summary()
 
 model.compile(optimizer='RMSprop',loss='categorical_crossentropy',metrics =['accuracy'])
-history = model.fit(training_set,validation_data=val_set,epochs=3,batch_size=16)
+history = model.fit(training_set,validation_data=val_set,epochs=5,batch_size=16)
 
 def plot_graphs(history, string):
     plt.plot(history.history[string])
